@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './rickllow.png';
+import logo from './rickllow_logo.png';
 
 const Home = () => {
   return (

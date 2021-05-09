@@ -1,1 +1,1 @@
-![Rickllow logo](rickllow.png)
+![Rickllow logo](rickllow_logo.png)
