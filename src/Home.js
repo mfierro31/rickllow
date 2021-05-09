@@ -4,7 +4,7 @@ import logo from './rickllow_logo.png';
 const Home = () => {
   return (
     <div>
-      <img src={logo} />
+      <img src={logo} className="img-fluid" alt="rickllow logo"/>
     </div>
   );
 }
