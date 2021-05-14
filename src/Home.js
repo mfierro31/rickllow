@@ -1,10 +1,17 @@
 import React from 'react';
-import logo from './rickllow_logo.png';
+import SearchForm from './SearchForm';
+import './Home.css';
+import banner from './home_banner.jpeg';
 
 const Home = () => {
   return (
-    <div>
-      <img src={logo} className="img-fluid" alt="rickllow logo"/>
+    <div className="Home">
+      <div className="Home-banner-container">
+        <img src={banner} className="img-fluid Home-banner" alt="rick and morty in another dimension"/>
+        <h1 className="display-1">Tired of your place in the universe?</h1>
+        <SearchForm classOrNoClass="Home-search-form" />
+        <h4>We can help you change that.</h4>
+      </div>
     </div>
   );
 }

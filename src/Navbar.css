@@ -3,10 +3,15 @@
 }
 
 .Navbar-link {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 .Navbar-link:hover {
-  color: green;
+  color: rgb(0, 255, 0);
+}
+
+.Navbar-logo {
+  width: 200px;
+  height: 70px;
 }

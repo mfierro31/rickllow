@@ -1,0 +1,28 @@
+.Home-banner-container {
+  position: relative;
+  text-align: center;
+}
+
+.Home-banner-container h1 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  font-weight: 900;
+}
+
+.Home-banner-container h4 {
+  color: white;
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  font-weight: 900;
+}
+
+.Home-search-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
