@@ -8,7 +8,7 @@ const Home = () => {
     <div className="Home">
       <div className="Home-banner-container">
         <img src={banner} className="img-fluid Home-banner" alt="rick and morty in another dimension"/>
-        <h1 className="display-1">Tired of your place in the universe?</h1>
+        <h1>Tired of your place in the universe?</h1>
         <SearchForm classOrNoClass="Home-search-form" />
         <h4>We can help you change that.</h4>
       </div>

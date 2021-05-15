@@ -3,7 +3,7 @@ import React from 'react';
 const SearchForm = ({ classOrNoClass }) => {
   return (
     <form className={classOrNoClass ? classOrNoClass : ""}>
-      <input type="text" placeholder="enter a location name" />
+      <input type="text" className="form-control" placeholder="enter a location name" />
     </form>
   );
 }

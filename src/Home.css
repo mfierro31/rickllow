@@ -1,9 +1,79 @@
 .Home-banner-container {
   position: relative;
-  text-align: center;
 }
 
 .Home-banner-container h1 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  font-weight: 700;
+}
+
+.Home-banner-container h4 {
+  color: white;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -1%);
+  white-space: nowrap;
+}
+
+.Home-search-form {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -70%);
+}
+
+@media only screen and (min-width: 375px) {
+  .Home-search-form {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+  }
+}
+
+@media only screen and (min-width: 512px) {
+  .Home-search-form {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+  }
+
+  .Home-search-form input {
+    height: 50px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .Home-banner-container h1 {
+    font-weight: 900;
+  }
+
+  .Home-search-form {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+  }
+
+  .Home-search-form input {
+    height: 80px;
+  }
+
+  .Home-banner-container h4 {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-weight: 900;
+  }
+}
+/* .Home-banner-container h1 {
   position: absolute;
   top: 10%;
   left: 50%;
@@ -25,4 +95,4 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
