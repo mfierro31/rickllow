@@ -1,0 +1,28 @@
+.input-container {
+  position: relative;
+}
+
+.input-container button {
+  position: absolute;
+  top: 20%;
+  right: 1%;
+  transform: translate(-20%, -1%);
+  background-color: #fff;
+  border: none;
+}
+
+@media only screen and (min-width: 512px) {
+  .input-container button {
+    top: 26%;
+    right: 1%;
+    transform: translate(-26%, -1%);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .input-container button {
+    top: 40%;
+    right: 1%;
+    transform: translate(-40%, -1%);
+  }
+}
