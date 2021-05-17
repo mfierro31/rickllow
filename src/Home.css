@@ -8,6 +8,15 @@
   position: relative;
 }
 
+.Home-links {
+  text-decoration: none;
+  color: black;
+}
+
+.Home-links:hover {
+  color: rgb(0, 141, 0);
+}
+
 .Home-banner-container h1 {
   position: absolute;
   top: 5%;

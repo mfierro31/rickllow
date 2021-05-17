@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SearchForm from './SearchForm';
 import './Home.css';
-import banner from './home_banner.jpeg';
-import earth from './earth.png';
-import citadel from './citadel_of_ricks.png';
-import cromulons from './Cromulon_Dimension.png';
-import greasyGrandmaWorld from './greasy_grandma_world.jpeg';
+import banner from './images/home_banner.jpeg';
+import earth from './images/earth.png';
+import citadel from './images/citadel_of_ricks.png';
+import cromulons from './images/Cromulon_Dimension.png';
+import anatomyPark from './images/Anatomy_Park.png';
 
 const Home = () => {
   return (
@@ -16,22 +17,24 @@ const Home = () => {
         <SearchForm classOrNoClass="Home-search-form" />
         <h4>We can help you change that.</h4>
       </div>
-      <h2 className="mt-3">Search by category</h2>   
-      <div>
-        <h4>Planets</h4>
-        <img src={earth} className="img-fluid" alt="earth" />
-      </div>
-      <div>
-        <h4>Space Stations</h4>
-        <img src={citadel} className="img-fluid" alt="citadel of ricks" />
-      </div>
-      <div>
-        <h4>Dimensions</h4>
-        <img src={cromulons} className="img-fluid" alt="cromulon dimension" />
-      </div>
-      <div>
-        <h4>Everything else</h4>
-        <img src={greasyGrandmaWorld} className="img-fluid" alt="greasy grandma world" />
+      <h2 className="mt-3">Search by category</h2>
+      <div className="row my-5 mx-3">
+        <div className="col-md-3 mb-3">
+          <h4><Link to="/listings/planets" className="Home-links">Planets</Link></h4>
+          <Link to="/listings/planets"><img src={earth} className="img-fluid rounded-3" alt="earth" /></Link>
+        </div>
+        <div className="col-md-3 mb-3">
+          <h4><Link to="/listings/space-stations" className="Home-links">Space Stations</Link></h4>
+          <Link to="/listings/space-stations"><img src={citadel} className="img-fluid rounded-3" alt="citadel of ricks" /></Link>
+        </div>
+        <div className="col-md-3 mb-3">
+          <h4><Link to="/listings/dimensions" className="Home-links">Dimensions</Link></h4>
+          <Link to="/listings/dimensions"><img src={cromulons} className="img-fluid rounded-3" alt="cromulon dimension" /></Link>
+        </div>
+        <div className="col-md-3">
+          <h4><Link to="/listings/misc"  className="Home-links">Everything else</Link></h4>
+          <Link to="/listings/misc"><img src={anatomyPark} className="img-fluid rounded-3" alt="anatomy park" /></Link>
+        </div>
       </div>
     </div>
   );

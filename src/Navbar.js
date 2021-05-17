@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from './rickllow_logo.png';
+import logo from './images/rickllow_logo.png';
 import './Navbar.css';
 
 
