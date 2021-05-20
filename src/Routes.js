@@ -14,6 +14,9 @@ const Routes = () => {
       <Route exact path="/account">
         <Account />
       </Route>
+      <Route exact path="/listings/categories/:category">
+        <Listings />
+      </Route>
       <Route exact path="/listings/:id">
         <Listing />
       </Route>
