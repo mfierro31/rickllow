@@ -6,15 +6,15 @@ import locations from './locations.js'
 const Listings = () => {
   return (
     <div className="Listings container">
-      <h1>All Listings</h1>
+      <h1 className="my-4">All Listings</h1>
       <div className="row">
         {locations.map(l => (
-          <div key={l.id} className="col-12 col-md-6 col-lg-3">
-            <div className="card">
+          <div key={l.id} className="col-12 col-md-6 col-lg-3 mb-4">
+            <div className="card rounded shadow">
               <Link to={`/listings/${l.id}`}>
                 <img src={`/images/${l.images[0]}`} className="card-img-top img-fluid" alt={l.name} />
               </Link>
-              <div className="card-body">
+              <div className="card-body rounded-bottom">
                 <h5 className="card-title">{l.name}</h5>
                 <p className="card-text">{l.cost}</p>
               </div>
