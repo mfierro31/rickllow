@@ -1,17 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Listings.css';
+import locations from './locations.js'
 
 const Listings = () => {
   return (
-    <div className="Listings">
-      <h1>Listings</h1>
-      <ul className="p-0">
-        <li className="listing"><Link to="/listings/1">Citadel of Ricks</Link></li>
-        <li className="listing"><Link to="/listings/2">Earth: Dimension C-137</Link></li>
-        <li className="listing"><Link to="/listings/3">Blips and Chitz</Link></li>
-        <li className="listing"><Link to="/listings/4">Greasy Grandma World</Link></li>
-      </ul>
+    <div className="Listings container">
+      <h1>All Listings</h1>
+      <div className="row">
+        {locations.map(l => (
+          <div key={l.id} className="col-12 col-md-6 col-lg-3">
+            <div className="card">
+              <Link to={`/listings/${l.id}`}>
+                <img src={`/images/${l.images[0]}`} className="card-img-top img-fluid" alt={l.name} />
+              </Link>
+              <div className="card-body">
+                <h5 className="card-title">{l.name}</h5>
+                <p className="card-text">{l.cost}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
