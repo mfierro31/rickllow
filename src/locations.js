@@ -15,7 +15,11 @@ const locations = [
       "I'm a cronenberg, and I loved it!  Very nice neighborhoods all around the planet.  Made me feel safe and secure.  Definitely making this place my home!",
       "Definitely not a place for non-cronenbergs!  I nearly died on that planet!"
     ],
-    agent: "Cronenberg Rick"
+    agent: {
+      id: 82,
+      name: "Cronenberg Rick",
+      image: "cronenberg_rick.jpeg"
+    }
   },
   {
     id: 3,
@@ -36,7 +40,11 @@ const locations = [
       "President Morty is the best, bro!  He personally greeted me on my visit to the Citadel and offered me a good-paying job if I moved there!  Totally doing it now!",
       "Well, President Morty might not be my flask of liquor, but damn it I'm impressed by this place.  It's really been cleaned up.  I'm seriously thinking of moving here now."
     ],
-    agent: "Robot Rick"
+    agent: {
+      id: 103,
+      name: "Doofus Rick",
+      image: "doofus_rick.jpeg"
+    }
   },
   {
     id: 4,
@@ -54,7 +62,11 @@ const locations = [
       "Dead, rotting bodies still litter the ground, but I'm a Satanist, so that don't bother me none!  I love the stench of death.",
       "Totally unlivable.  No way in hell I'm ever living there!  Don't waste your time!"
     ],
-    agent: "Supernova"
+    agent: {
+      id: 340,
+      name: "Supernova",
+      image: "supernova.jpeg"
+    }
   },
   {
     id: 5,
@@ -77,7 +89,11 @@ const locations = [
       "Way better than Disneyland!  Definitely won't get tired of Anatomy Park!  Keep me here forever!  I'm in!",
       "Most of Ethan is pretty cool, except for the colon.  Don't stay there.  It stinks so bad there.  And don't wander off too far from the park, Gonorrhea and Hepatitis B are constantly on the prowl and will eat you up in an instant if you're not careful!"
     ],
-    agent: "Annie"
+    agent: {
+      id: 17,
+      name: "Annie",
+      image: "annie.jpeg"
+    }
   },
   {
     id: 6,
@@ -85,7 +101,7 @@ const locations = [
     type: "TV",
     dimension: "unknown",
     description: "Ever fantasize about living inside of a TV?  Well, fantasy has become reality!  Live inside the world of Interdimensional Cable today!  Travel across dimensions and say hello to your favorite Interdimensional Cable stars like Ants In My Eyes Johnson, Glenn, Gazorpazorpfield, Ball Fondlers, and many more!  Contact the agent today!",
-    cost: "$25,000/year",
+    cost: "50,000 Brapples/year ($25,000/year)",
     neighborhood: "OK",
     images: [
       "interdimensional_cable_ants_in_my_eyes_johnson.png",
@@ -106,7 +122,11 @@ const locations = [
       "Ball Fondlers were awesome!  Got to meet them and join them on a couple adventures.  I'm definitely spending the rest of my life here!",
       "I was being shown around by Ants In My Eyes Johnson, but because he can't see or feel anything, Stealy started robbing him of all his clothes, then he took me and robbed me!  Watch out for Stealy."
     ],
-    agent: "Ants In My Eyes Johnson"
+    agent: {
+      id: 20,
+      name: "Ants In My Eyes Johnson",
+      image: "ants_in_my_eyes_johnson.jpeg"
+    }
   }
 ];
 
