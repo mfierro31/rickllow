@@ -2,9 +2,14 @@ import React from 'react';
 import './ViewLocationForm.css';
 
 const ViewLocationForm = () => {
-  // One-liner to get today's date in string form
+  // Two-liner to get today's local (Los Angeles) date in string form
+  // This line gives us today's date in m/d/yyyy format
   const todayLocal = new Date().toLocaleDateString();
+  // This line turns that back into a UTC format, turns it into a string, splits it where the date ends and the time begins,
+  // and returns the date in string form in the correct yyyy-mm-dd format
   const todayLocalCorrectFormat = new Date(todayLocal).toISOString().split('T')[0];
+  // I did this, because most likely, no one outside of the US is going to see this website, so it'd be better if this project
+  // centered around LA time, that way, at most, it will only be 3 hours behind or ahead of a user.
   
   return (
     <div className="row justify-content-center">

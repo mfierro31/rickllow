@@ -54,13 +54,13 @@ const Listing = () => {
         <div className="col-12">
           <p>{listing.description}</p>
         </div>
-        <h3>Agent:</h3>
-        <div className="col-12 col-md-6 mb-4 mb-md-5">
+        <h3 className="mb-3">Agent:</h3>
+        <div className="col-12 col-md-6 mb-4">
           <h5>{listing.agent.name}</h5>
           <img src={`/images/${listing.agent.image}`} className="img-fluid rounded shadow" alt={listing.agent.name} />
         </div>
-        <div className="col-12 col-lg-6 mb-5">
-          <h5>View this location with {listing.agent.name}!</h5>
+        <div className="col-12 col-md-6 mb-5">
+          <h5 className="mb-3">View this location with {listing.agent.name}!</h5>
           <ViewLocationForm />
         </div>
       </div>
