@@ -3,6 +3,7 @@ import { useParams, Redirect } from 'react-router-dom';
 import locations from './locations';
 import ViewLocationForm from './ViewLocationForm';
 import './Listing.css';
+import SaveHeart from './SaveHeart';
 
 const Listing = () => {
   const { id } = useParams();
@@ -31,6 +32,11 @@ const Listing = () => {
   return (
     <div className="Listing container">
       <h1 className="my-4">{listing.name}</h1>
+      <div className="row justify-content-center mb-4">
+        <div>
+          <SaveHeart saveText color="primary" />
+        </div>
+      </div>
       <div className="row justify-content-center">
         {listing.images.map((img, i) => (
           <div key={i} className={imgClassName + " mb-4"}>
@@ -63,6 +69,12 @@ const Listing = () => {
           <h5 className="mb-3">View this location with {listing.agent.name}!</h5>
           <ViewLocationForm />
         </div>
+        <h3 className="mb-3">Reviews:</h3>
+        <ul className="text-start mb-5">
+          {listing.reviews.map((r, i) => (
+            <li key={i} className="mb-3">{r}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );

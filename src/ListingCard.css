@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.ListingCard-heart {
+.ListingCard-img-container .SaveHeart {
   position: absolute;
   top: 4%;
   right: 4%;
