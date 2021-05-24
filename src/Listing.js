@@ -32,6 +32,8 @@ const Listing = () => {
   return (
     <div className="Listing container">
       <h1 className="my-4">{listing.name}</h1>
+      {/* Try to understand this better - the positioning and alignment of it all.  Can we make it so that it behaves
+      like the heart buttons on the ListingCard components?  i.e. - it doesn't move when you click on it */}
       <div className="row justify-content-center mb-4">
         <div>
           <SaveHeart saveText color="primary" />
@@ -70,7 +72,7 @@ const Listing = () => {
           <ViewLocationForm />
         </div>
         <h3 className="mb-3">Reviews:</h3>
-        <ul className="text-start mb-5">
+        <ul className="text-sm-start mb-5">
           {listing.reviews.map((r, i) => (
             <li key={i} className="mb-3">{r}</li>
           ))}
