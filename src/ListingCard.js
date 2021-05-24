@@ -15,9 +15,11 @@ const ListingCard = ({ id, name, cost, image }) => {
       </div>
       <div className="card-body rounded-bottom">
         <h5 className="card-title">{name}</h5>
+        {/* Below, we check to see if the cost of living is in another currency.  If it is, we show that currency first,
+          followed by the USD equivalent in parentheses.  If not, we just show the USD amount. */}
         <p className="card-text">
           {cost.altCurr ? 
-            `${numberWithCommas(cost.altCost)} ${cost.altCurr}/year ($${numberWithCommas(cost.cost)}/year)` : 
+            `${numberWithCommas(cost.altCost)} ${cost.altCurr}($${numberWithCommas(cost.cost)})/year` : 
             `$${numberWithCommas(cost.cost)}/year`
           }
         </p>

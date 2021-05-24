@@ -4,6 +4,7 @@ import Account from "./Account";
 import Listings from "./Listings";
 import Listing from "./Listing";
 import { Route, Switch, Redirect } from "react-router-dom";
+import Dimensions from "./Dimensions";
 
 const Routes = () => {
   return (
@@ -13,6 +14,9 @@ const Routes = () => {
       </Route>
       <Route exact path="/account">
         <Account />
+      </Route>
+      <Route exact path="/listings/categories/dimensions">
+        <Dimensions />
       </Route>
       <Route exact path="/listings/categories/:category">
         <Listings />

@@ -55,9 +55,11 @@ const Listing = () => {
           <p><b>Dimension:</b> {listing.dimension}</p>
         </div>
         <div className="col-12 col-md-6">
+          {/* Below, we check to see if the cost of living is in another currency.  If it is, we show that currency first,
+          followed by the USD equivalent in parentheses.  If not, we just show the USD amount. */}
           <p><b>Cost Of Living:</b> 
             {listing.alt_cost_curr ? 
-              ` ${numberWithCommas(listing.alt_cost_amt)} ${listing.alt_cost_curr}/year ($${numberWithCommas(listing.cost)}/year)` : 
+              ` ${numberWithCommas(listing.alt_cost_amt)} ${listing.alt_cost_curr}($${numberWithCommas(listing.cost)})/year` : 
               ` $${numberWithCommas(listing.cost)}/year`
             }
           </p>
