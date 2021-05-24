@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ListingCard.css';
 import SaveHeart from './SaveHeart';
+import { numberWithCommas } from './helpers';
 
 const ListingCard = ({ id, name, cost, image }) => {
   return (
@@ -14,7 +15,12 @@ const ListingCard = ({ id, name, cost, image }) => {
       </div>
       <div className="card-body rounded-bottom">
         <h5 className="card-title">{name}</h5>
-        <p className="card-text">{cost}</p>
+        <p className="card-text">
+          {cost.altCurr ? 
+            `${numberWithCommas(cost.altCost)} ${cost.altCurr}/year ($${numberWithCommas(cost.cost)}/year)` : 
+            `$${numberWithCommas(cost.cost)}/year`
+          }
+        </p>
       </div>
     </div>
   );

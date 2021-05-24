@@ -4,6 +4,7 @@ import locations from './locations';
 import ViewLocationForm from './ViewLocationForm';
 import './Listing.css';
 import SaveHeart from './SaveHeart';
+import { numberWithCommas } from './helpers';
 
 const Listing = () => {
   const { id } = useParams();
@@ -54,7 +55,12 @@ const Listing = () => {
           <p><b>Dimension:</b> {listing.dimension}</p>
         </div>
         <div className="col-12 col-md-6">
-          <p><b>Cost Of Living:</b> {listing.cost}</p>
+          <p><b>Cost Of Living:</b> 
+            {listing.alt_cost_curr ? 
+              ` ${numberWithCommas(listing.alt_cost_amt)} ${listing.alt_cost_curr}/year ($${numberWithCommas(listing.cost)}/year)` : 
+              ` $${numberWithCommas(listing.cost)}/year`
+            }
+          </p>
         </div>
         <div className="col-12 col-md-6">
           <p><b>Neighborhood Rating:</b> {listing.neighborhood}</p>
@@ -72,9 +78,11 @@ const Listing = () => {
           <ViewLocationForm />
         </div>
         <h3 className="mb-3">Reviews:</h3>
+        {/* For some reason, on extra small screen sizes, the bullet points disappear */}
         <ul className="text-sm-start mb-5">
-          {listing.reviews.map((r, i) => (
-            <li key={i} className="mb-3">{r}</li>
+          {/* The &#8212; below is HTML for a long dash */}
+          {listing.reviews.map(r => (
+            <li key={r.id} className="mb-3">{r.text} &#8212; <small className="text-primary">{r.user.username}</small></li>
           ))}
         </ul>
       </div>

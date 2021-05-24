@@ -10,7 +10,12 @@ const Listings = () => {
       <div className="row justify-content-center">
         {locations.map(l => (
           <div key={l.id} className="col-12 col-md-6 col-lg-3 mb-4">
-            <ListingCard id={l.id} name={l.name} cost={l.cost} image={l.images[0]} />
+            <ListingCard 
+              id={l.id} 
+              name={l.name} 
+              cost={{ cost: l.cost, altCost: l.alt_cost_amt, altCurr: l.alt_cost_curr }} 
+              image={l.images[0]} 
+            />
           </div>
         ))}
       </div>

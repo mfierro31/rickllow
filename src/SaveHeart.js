@@ -1,3 +1,8 @@
+// This component is the save button, or the heart icon, on the ListingCard and Listing components.
+// Tried to make this as flexible as possible for both use-cases, so there's an option to have the text 'Save'
+// next to it, which we use in the Listing component.  This also changes to 'Saved' when the empty heart is clicked,
+// then goes back to 'Save' when the full heart is clicked.  We also have to pass in a valid Bootstrap color for the
+// heart.
 import React, { useState } from 'react';
 import './SaveHeart.css';
 
