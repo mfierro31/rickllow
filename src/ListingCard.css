@@ -1,3 +1,7 @@
+.ListingCard {
+  max-height: 50%;
+}
+
 .ListingCard-img-container {
   position: relative;
 }
