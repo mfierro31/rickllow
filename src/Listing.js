@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Redirect } from 'react-router-dom';
-import locations from './locations';
+import locations from './myLocations';
 import ViewLocationForm from './ViewLocationForm';
 import './Listing.css';
 import SaveHeart from './SaveHeart';

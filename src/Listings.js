@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Redirect } from 'react-router-dom';
 import './Listings.css';
-import locations from './locations';
+import locations from './myLocations';
 import ListingCard from './ListingCard';
 
 const Listings = () => {

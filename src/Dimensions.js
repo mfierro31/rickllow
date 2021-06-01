@@ -1,5 +1,7 @@
+// Dimensions can't be displayed the same way as Planets, Space Stations, and Everything Else, so instead of using the 
+// Listings component for dimensions, I have to create a new component instead.
 import React from 'react';
-import locations from './locations';
+import locations from './myLocations';
 import ListingCard from './ListingCard';
 
 const Dimensions = () => {
@@ -15,7 +17,7 @@ const Dimensions = () => {
   });
 
   return (
-    <div className="Dimensions container">
+    <div className="container">
       <h1 className="my-4">Dimensions({dimensionsArr.length})</h1>
       <div className="row justify-content-center">
         {dimensionsArr.map(d => (
