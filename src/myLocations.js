@@ -1456,9 +1456,145 @@ const myLocations = [
   }
 ];
 
+// Locations not in the Rick and Morty API that I still wanted to include
+const myExtraLocations = [
+  {
+    id: 107,
+    name: "Dwarf Terrace-9",
+    type: "Planet",
+    dimension: "Replacement Dimension",
+    description: "Dwarf Terrace-9 is a fascinating planet.  If you have ever been to Earth, it is basically just a really scaled-down version of that planet.  Dwarf Terrace-9 is so small, that you can walk around the entire planet in about 2 minutes, yet it still has enough gravity to keep you glued to its surface.  And it's not just an asteroid either, it is a full-blown planet with an atmosphere and weather.  It is truly mind-boggling, but it's an awesome place to call home!  It is outside of the Galactic Federation's jurisdiction, so it's a great place just to lay low or avoid having to pay taxes or just live on a planet that has no laws.  Make Dwarf Terrace-9 your home today!",
+    cost: 0,
+    alt_cost_curr: null,
+    alt_cost_amt: null,
+    neighborhood: "Safe",
+    images: [
+      "dwarf_terrace_9.png",
+      "dwarf_terrace_9_south_pole.png",
+      "dwarf_terrace_9_ship_and_house.png",
+      "dwarf_terrace_9_core.png",
+      "dwarf_terrace_9_all_terrains.png"
+    ],
+    reviews: [],
+    agent: {
+      id: 313,
+      name: "Shleemypants",
+      image: "shleemypants.jpeg" 
+    }
+  },
+  {
+    id: 108,
+    name: "On A Cob Planet",
+    type: "Planet",
+    dimension: "Replacement Dimension",
+    description: "Everyone likes corn on the cob, right?  Well, just imagine, if there existed a world where, not only corn was on a cob, but EVERYTHING was on a cob.  Well, such a place exists, and it's simply called On A Cob Planet.  On this planet, everything, from mountains, to flowers, to rocks, to strawberries, to birds and ants, are on a cob.  In fact, the entire planet is on a cob!  This planet has to be seen to be believed.  Come visit today and make On A Cob Planet your home today!",
+    cost: 0,
+    alt_cost_curr: null,
+    alt_cost_amt: null,
+    neighborhood: "Safe",
+    images: [
+      "cob_planet_mountains.png",
+      "cob_planet_ants.png",
+      "cob_planet_rick_inspects.jpeg",
+      "cob_planet_strawberries_and_flowers.jpeg"
+    ],
+    reviews: [],
+    agent: {
+      id: 313,
+      name: "Shleemypants",
+      image: "shleemypants.jpeg" 
+    }
+  },
+  {
+    id: 109,
+    name: "Screaming Sun Planet",
+    type: "Planet",
+    dimension: "Replacement Dimension",
+    description: "Screaming Sun Planet is a beautiful world with bountiful natural resources that you can survive off of with no need for money.  There are currently no residents on Screaming Sun Planet, so the entire planet is yours if you choose to move there!  One thing we do have to let you know, though... the sun on this planet screams at the top of its lungs all day.  And the days on this planet last for 42 hours.  So, that's something to consider.  But other than that, it's a perfect planet!  Come make Screaming Sun Planet your home today!",
+    cost: 0,
+    alt_cost_curr: null,
+    alt_cost_amt: null,
+    neighborhood: "Safe",
+    images: [
+      "screaming_sun_planet.jpeg"
+    ],
+    reviews: [],
+    agent: {
+      id: 313,
+      name: "Shleemypants",
+      image: "shleemypants.jpeg"
+    }
+  },
+  {
+    id: 110,
+    name: "Buttworld",
+    type: "Dimension",
+    dimension: "Buttworld Dimension",
+    description: "How would you like to be surrounded by big butts for the rest of your life?  Sounds too good to be true?  Well, it ain't!  Not here on Buttworld!  Buttworld is a dimension that is full of huge 10 ft. high, 10 ft. wide, farting butts that are sticking out of the ground.  Each butt is different.  Some are shaved, some are hairy, some are saggy, some are toned, some are flat, and some of them are perfect.  There are also trees that grow out of the ground whose branches have toilet paper on them.  There are also giant toilet plungers that grow out of the ground as well.  And, speaking of the ground, the ground is made up of a mixture of feces and dirt.  If you are a feces eater or just someone who likes big butts, this dimension is for you!  Come visit Buttworld and make it your home today!",
+    cost: 0,
+    alt_cost_curr: null,
+    alt_cost_amt: null,
+    neighborhood: "Safe",
+    images: [
+      "buttworld.jpeg"
+    ],
+    reviews: [],
+    agent: {
+      id: 313,
+      name: "Shleemypants",
+      image: "shleemypants.jpeg"
+    }
+  },
+  {
+    id: 111,
+    name: "Doopidoo Dimension",
+    type: "Dimension",
+    dimension: "Doopidoo Dimension",
+    description: "The Doopidoo Dimension is a beautiful, colorful dimension, occupied by gentle, bird-like creatures with bowl cuts that just say 'Doopidoo' nonstop for their entire lives.  It can get quite annoying to some, but if you're willing to put up with that, it's definitely the dimension to be!  It has beautiful scenery, it is not occupied by any intelligent beings, and as a result of that, it costs nothing to live here, other than the cost of any equipment you need to survive off of nature.  Come make the Doopidoo Dimension your home today!",
+    cost: 0,
+    alt_cost_curr: null,
+    alt_cost_amt: null,
+    neighborhood: "Safe",
+    images: [
+      "Doopidoo_Dimension.jpeg"
+    ],
+    reviews: [],
+    agent: {
+      id: 313,
+      name: "Shleemypants",
+      image: "shleemypants.jpeg"
+    }
+  },
+  {
+    id: 112,
+    name: "Dimension 35-C",
+    type: "Dimension",
+    dimension: "Dimension 35-C",
+    description: "Dimension 35-C is so freakin' crazy, in all the coolest and best ways!  Nature is quite bizarre here.  There are plants and rocks that have eyes that blink, there are creatures that just absolutely make no sense at all, like a winged, flying butt, a blob of human body parts, and a creepy, giant, spider-like creature.  It is one of the weirdest, trippiest, dimensions in the entire multiverse, and you could call it home today!",
+    cost: 37000,
+    alt_cost_curr: "Blemflarcks",
+    alt_cost_amt: 47000,
+    neighborhood: "OK",
+    images: [
+      "dimension_35C.png",
+      "dimension_35C_seeds.jpeg",
+      "dimension_35C_scary_monster.jpeg",
+      "dimension_35C_exploring.jpeg"
+    ],
+    reviews: [],
+    agent: {
+      id: 313,
+      name: "Shleemypants",
+      image: "shleemypants.jpeg"
+    }
+  }
+];
+
 const finalLocations = myLocations.map((l, i) => ({
   ...locations[i],
   ...l
 }));
+
+myExtraLocations.forEach(location => finalLocations.push(location));
 
 export default finalLocations;

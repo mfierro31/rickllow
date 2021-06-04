@@ -1,9 +1,10 @@
-.ListingCard {
-  max-height: 50%;
-}
-
 .ListingCard-img-container {
   position: relative;
+  height: 120px;
+}
+
+.ListingCard-img-container a, .ListingCard-img-container img {
+  height: 100%;
 }
 
 .ListingCard-img-container .SaveHeart {
