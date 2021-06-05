@@ -922,7 +922,7 @@ const myLocations = [
     alt_cost_amt: 80000,
     neighborhood: "Safe",
     images: [
-      "Pawn_Shop_Planet.jpeg",
+      "Pawn_Shop_Planet.png",
       "Pawn_Shop_Planet_sex_robot.jpeg"
     ],
     reviews: [],
@@ -957,8 +957,8 @@ const myLocations = [
     alt_cost_amt:  100000,
     neighborhood: "Safe",
     images: [
-      "gear_world_planet.png",
-      "gear_world.jpeg"
+      "gear_world.png",
+      "gear_world_market.jpeg"
     ],
     reviews: [],
     agent: {
@@ -1469,9 +1469,8 @@ const myExtraLocations = [
     alt_cost_amt: null,
     neighborhood: "Safe",
     images: [
-      "dwarf_terrace_9.png",
-      "dwarf_terrace_9_south_pole.png",
       "dwarf_terrace_9_ship_and_house.png",
+      "dwarf_terrace_9_south_pole.png",
       "dwarf_terrace_9_core.png",
       "dwarf_terrace_9_all_terrains.png"
     ],

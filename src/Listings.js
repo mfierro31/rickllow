@@ -39,7 +39,7 @@ const Listings = () => {
       <h1 className="my-4">{title}({listings.length})</h1>
       <div className="row justify-content-center">
         {listings.map(l => (
-          <div key={l.id} className="Listings-columns col-12 col-md-6 col-lg-3 mb-4">
+          <div key={l.id} className="Listings-columns col-12 col-md-6 col-lg-4 col-xxl-3 mb-4">
             {/* Below, we have to pass in cost as an object, because we need to know for every location if that location
             has an alternate currency.  If it does, we have to show that plus the normal USD cost. */}
             <ListingCard 

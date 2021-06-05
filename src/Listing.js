@@ -21,14 +21,15 @@ const Listing = () => {
   let imgClassName;
 
   if (imgLength === 1) {
-    imgClassName = "col-12";
-  } else if (imgLength === 2) {
+    imgClassName = "col-12 col-xl-6";
+  } else if (imgLength === 2 || imgLength === 4) {
     imgClassName = "col-12 col-md-6";
-  } else if (imgLength === 3) {
-    imgClassName = "col-12 col-md-4";
   } else {
-    imgClassName = "col-12 col-md-6 col-lg-3";
+    imgClassName = "col-12 col-md-4";
   }
+  // } else {
+  //   imgClassName = "col-12 col-md-6 col-lg-3";
+  // }
 
   return (
     <div className="Listing container">
@@ -42,7 +43,7 @@ const Listing = () => {
       </div>
       <div className="row justify-content-center">
         {listing.images.map((img, i) => (
-          <div key={i} className={imgClassName + " mb-4"}>
+          <div key={i} className={imgClassName + " mb-4 Listing-img-col"}>
             <img src={`/images/${img}`} className="img-fluid Listing-image rounded shadow" alt={img} />
           </div>
         ))}
@@ -59,7 +60,7 @@ const Listing = () => {
           followed by the USD equivalent in parentheses.  If not, we just show the USD amount. */}
           <p><b>Cost Of Living:</b> 
             {listing.alt_cost_curr ? 
-              ` ${numberWithCommas(listing.alt_cost_amt)} ${listing.alt_cost_curr}($${numberWithCommas(listing.cost)})/year` : 
+              ` ${numberWithCommas(listing.alt_cost_amt)} ${listing.alt_cost_curr} ($${numberWithCommas(listing.cost)})/year` : 
               ` $${numberWithCommas(listing.cost)}/year`
             }
           </p>
