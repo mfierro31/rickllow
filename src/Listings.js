@@ -1,11 +1,19 @@
 import React from 'react';
-import { useParams, Redirect } from 'react-router-dom';
+import { useParams, Redirect, useLocation } from 'react-router-dom';
 import './Listings.css';
 import locations from './myLocations';
 import ListingCard from './ListingCard';
 
 const Listings = () => {
   const { category } = useParams();
+  // Process to get the query param values, if there are any:
+  // useLocation hook gives back an object containing info about the URL.  One of the properties is search, which contains
+  // the query params part of a URL.  If our query param was ?search-term=earth, it would return that string.
+  const { search } = useLocation();
+  // URLSearchParams is a JS class that has useful methods to modify or get info from a URL param.  The get method simply gets
+  // the value of a search parameter.  If it doesn't find the parameter you're looking for, it returns null.  
+  const searchTerm = new URLSearchParams(search).get('search-term');
+
   let title;
   let listings;
 
@@ -25,13 +33,26 @@ const Listings = () => {
         title = "Space Stations";
         listings = locations.filter(l => l.type === "Space station")
         break;
-      case "misc":
+      default:
         title = "Everything Else";
         listings = locations.filter(l => l.type !== "Planet" && l.type !== "Space station");
     }
   } else {
     title = "All Listings";
     listings = locations;
+  }
+
+  if (searchTerm) {
+    title = `Search Results For "${searchTerm}"`;
+    // To filter by the search term, we can use the string version of indexOf to help us.  Since we're not looking for an exact
+    // match from our locations to our search term, we're just looking for partial matches, we can use indexOf to see if a
+    // location's type, dimension, or name includes a substring (the search term).  If it does include the search term, its 
+    // location will be one of the filtered results, if not, it won't.
+    listings = locations.filter(l => (
+      l.type.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0  || 
+      l.name.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0 || 
+      l.dimension.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0
+    ));
   }
   
   return (
