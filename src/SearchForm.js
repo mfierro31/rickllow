@@ -5,13 +5,16 @@ import './SearchForm.css';
 const SearchForm = ({ classOrNoClass }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const history = useHistory();
+  
   const handleChange = evt => {
     setSearchTerm(evt.target.value);
   }
+
   const handleSubmit = evt => {
     evt.preventDefault();
     history.push(`/listings?search-term=${searchTerm}`);
   }
+
   return (
     <form className={classOrNoClass ? classOrNoClass : ""} onSubmit={handleSubmit}>
       <div className="input-container">

@@ -25,7 +25,7 @@ const Dimensions = () => {
             <h3>{d.name}({d.listings.length} locations)</h3>
             <div className="row justify-content-center">
               {d.listings.map(l => (
-                <div key={l.id} className="col-12 col-md-6 col-lg-3 mb-4">
+                <div key={l.id} className="col-12 col-md-6 col-lg-4 col-xxl-3 mb-4">
                   {/* Below, we have to pass in cost as an object, because we need to know for every location if that location
                   has an alternate currency.  If it does, we have to show that plus the normal USD cost. */}
                   <ListingCard 
