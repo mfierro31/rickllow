@@ -27,9 +27,6 @@ const Listing = () => {
   } else {
     imgClassName = "col-12 col-md-4";
   }
-  // } else {
-  //   imgClassName = "col-12 col-md-6 col-lg-3";
-  // }
 
   return (
     <div className="Listing container">
@@ -78,7 +75,7 @@ const Listing = () => {
         </div>
         <div className="col-12 col-md-6 mb-5">
           <h5 className="mb-3">View this location with {listing.agent.name}!</h5>
-          <ViewLocationForm />
+          <ViewLocationForm location={listing} />
         </div>
         <h3 className="mb-3">Reviews:</h3>
         {/* For some reason, on extra small screen sizes, the bullet points disappear */}

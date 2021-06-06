@@ -9,3 +9,10 @@
 .ViewLocationForm button {
   width: 100%;
 }
+
+.ViewLocationForm-submitted-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
