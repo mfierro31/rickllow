@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from './images/rickllow_logo.png';
 import './Navbar.css';
 
 
@@ -9,7 +8,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand d-lg-none">
-          <img src={logo} className="img-fluid Navbar-logo" alt="rickllow logo"/>
+          <img src="/images/rickllow_logo.png" className="img-fluid Navbar-logo" alt="rickllow logo"/>
         </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
           aria-controls="navbarSupportedContent" 
@@ -25,7 +24,7 @@ const Navbar = () => {
             </li>
           </ul>
           <Link to="/" className="navbar-brand d-none d-lg-block">
-            <img src={logo} className="img-fluid Navbar-logo" alt="rickllow logo"/>
+            <img src="/images/rickllow_logo.png" className="img-fluid Navbar-logo" alt="rickllow logo"/>
           </Link>
           <ul className="navbar-nav mb-2 mb-lg-0">
             <li className="nav-item">
