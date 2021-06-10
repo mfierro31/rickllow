@@ -25,7 +25,7 @@ const SearchForm = ({ classOrNoClass }) => {
           value={searchTerm} 
           onChange={handleChange} 
         />
-        <button><i className="fas fa-search text-primary"></i></button>
+        <button><i className="fas fa-search text-primary SearchForm-btn"></i></button>
       </div>
     </form>
   );

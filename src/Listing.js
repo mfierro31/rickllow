@@ -5,6 +5,7 @@ import ViewLocationForm from './ViewLocationForm';
 import './Listing.css';
 import SaveHeart from './SaveHeart';
 import { numberWithCommas } from './helpers';
+import ReviewForm from './ReviewForm';
 
 const Listing = () => {
   const { id } = useParams();
@@ -85,6 +86,7 @@ const Listing = () => {
             <li key={r.id} className="mb-3">{r.text} &#8212; <small className="text-primary">{r.user.username}</small></li>
           ))}
         </ul>
+        <ReviewForm location={listing} />
       </div>
     </div>
   );

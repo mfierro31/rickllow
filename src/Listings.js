@@ -5,6 +5,7 @@ import locations from './myLocations';
 import ListingCard from './ListingCard';
 
 const Listings = () => {
+  console.log(locations);
   const { category } = useParams();
   // Process to get the query param values, if there are any:
   // useLocation hook gives back an object containing info about the URL.  One of the properties is search, which contains
