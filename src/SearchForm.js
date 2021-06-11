@@ -12,7 +12,7 @@ const SearchForm = ({ classOrNoClass }) => {
 
   const handleSubmit = evt => {
     evt.preventDefault();
-    history.push(`/listings?search-term=${searchTerm}`);
+    history.push(`/listings?search_term=${searchTerm}`);
   }
 
   return (

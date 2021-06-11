@@ -8,9 +8,9 @@ import { numberWithCommas } from './helpers';
 import ReviewForm from './ReviewForm';
 
 const Listing = () => {
-  const { id } = useParams();
+  const { name } = useParams();
 
-  const listing = locations.find(l => l.id === parseInt(id));
+  const listing = locations.find(l => l.name === name);
 
   if (!listing) {
     return <Redirect to="/listings" />;

@@ -4,11 +4,11 @@ import './ListingCard.css';
 import SaveHeart from './SaveHeart';
 import { numberWithCommas } from './helpers';
 
-const ListingCard = ({ id, name, cost, image }) => {
+const ListingCard = ({ name, cost, image }) => {
   return (
     <div className="ListingCard card rounded shadow">
       <div className="ListingCard-img-container">
-        <Link to={`/listings/${id}`}>
+        <Link to={`/listings/${name}`}>
           <img src={`/images/${image}`} className="card-img-top img-fluid" alt={name} />
         </Link>
         <SaveHeart color="white" />
