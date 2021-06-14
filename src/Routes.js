@@ -5,6 +5,7 @@ import Listings from "./Listings";
 import Listing from "./Listing";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Dimensions from "./Dimensions";
+import FourOFourPage from './404Page';
 
 const Routes = () => {
   return (
@@ -27,7 +28,7 @@ const Routes = () => {
       <Route exact path="/listings">
         <Listings />
       </Route>
-      <Redirect to="/" />
+      <Route><FourOFourPage /></Route>
     </Switch>
   );
 }
