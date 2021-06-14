@@ -1,18 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Redirect } from 'react-router-dom';
-import locations from './myLocations';
 import ViewLocationForm from './ViewLocationForm';
 import './Listing.css';
 import SaveHeart from './SaveHeart';
 import { numberWithCommas } from './helpers';
 import ReviewForm from './ReviewForm';
+import RickllowApi from './api';
 
 const Listing = () => {
   const { name } = useParams();
+  const [listing, setListing] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const listing = locations.find(l => l.name === name);
+  useEffect(() => {
+    async function getListing() {
+      const res = await RickllowApi.getLocation(name);
+      setListing(res);
+      setIsLoading(false);
+    }
+    getListing();
+  }, [name]);
 
-  if (!listing) {
+  if (isLoading) {
+    return <h1 className="my-4">Loading...</h1>;
+  }
+
+  if (typeof listing === 'string') {
     return <Redirect to="/listings" />;
   }
 
@@ -83,7 +96,7 @@ const Listing = () => {
         <ul className="text-sm-start mb-5">
           {/* The &#8212; below is HTML for a long dash */}
           {listing.reviews.map(r => (
-            <li key={r.id} className="mb-3">{r.text} &#8212; <small className="text-primary">{r.user.username}</small></li>
+            <li key={r.id} className="mb-3">{r.text} &#8212; <small className="text-primary">{r.user_username}</small></li>
           ))}
         </ul>
         <ReviewForm location={listing} />
