@@ -3,7 +3,7 @@ import Home from "./Home";
 import Account from "./Account";
 import Listings from "./Listings";
 import Listing from "./Listing";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Dimensions from "./Dimensions";
 import FourOFourPage from './404Page';
 

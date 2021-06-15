@@ -10,10 +10,14 @@ const Dimensions = () => {
 
   useEffect(() => {
     async function getDimensions() {
+      // What we have to do here is basically get all locations with their dimension properties and sort them by dimensions.
       const res = await RickllowApi.getLocationsByCategory('dimensions');
+      // First, we create a list of all dimensions using a Set, so there are no duplicate dimensions
       const dimensionsSet = new Set();
       res.forEach(l => dimensionsSet.add(l.dimension));
-
+      // Here, we turn that Set into an array, map through that array, and for each dimension in that array, we create an array
+      // of objects that have the dimension's id (just its index in the array), name, and locations (listings) associated with
+      // it.
       const dimensionsArr = Array.from(dimensionsSet).map((d, i) => {
         const listings = res.filter(l => l.dimension === d);
         return {

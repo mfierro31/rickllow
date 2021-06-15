@@ -23,7 +23,8 @@ const SearchForm = ({ classOrNoClass }) => {
           className="form-control" 
           placeholder="Enter a location name" 
           value={searchTerm} 
-          onChange={handleChange} 
+          onChange={handleChange}
+          required 
         />
         <button><i className="fas fa-search text-primary SearchForm-btn"></i></button>
       </div>

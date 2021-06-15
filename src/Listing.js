@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Redirect } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import ViewLocationForm from './ViewLocationForm';
 import './Listing.css';
 import SaveHeart from './SaveHeart';
 import { numberWithCommas } from './helpers';
 import ReviewForm from './ReviewForm';
 import RickllowApi from './api';
+import FourOFourPage from './404Page';
 
 const Listing = () => {
   const { name } = useParams();
@@ -15,6 +16,7 @@ const Listing = () => {
   useEffect(() => {
     async function getListing() {
       const res = await RickllowApi.getLocation(name);
+      // res could be an error message, so if we get an error, listing will be a string
       setListing(res);
       setIsLoading(false);
     }
@@ -25,8 +27,9 @@ const Listing = () => {
     return <h1 className="my-4">Loading...</h1>;
   }
 
+  // if listing is a string, we know we got an error message, so we pass that message into our 404 page
   if (typeof listing === 'string') {
-    return <Redirect to="/listings" />;
+    return <FourOFourPage message={listing} />;
   }
 
   // Make the column sizes conditional on how many images a listing has
@@ -45,8 +48,6 @@ const Listing = () => {
   return (
     <div className="Listing container">
       <h1 className="my-4">{listing.name}</h1>
-      {/* Try to understand this better - the positioning and alignment of it all.  Can we make it so that it behaves
-      like the heart buttons on the ListingCard components?  i.e. - it doesn't move when you click on it */}
       <div className="row justify-content-center mb-4">
         <div>
           <SaveHeart saveText color="primary" />

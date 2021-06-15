@@ -31,7 +31,8 @@ const ReviewForm = ({ location }) => {
           className="form-control" 
           placeholder="Leave a review" 
           value={review} 
-          onChange={handleChange} 
+          onChange={handleChange}
+          required 
         />
         <button className="btn btn-primary ReviewForm-btn">Submit</button>
       </div>
