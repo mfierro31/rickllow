@@ -12,7 +12,6 @@ const Listing = () => {
   const { name } = useParams();
   const [listing, setListing] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  console.log(listing);
 
   useEffect(() => {
     async function getListing() {

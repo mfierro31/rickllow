@@ -24,7 +24,7 @@ class RickllowApi {
       const result = await axios.get(`/locations/${name}`);
       return result.data.location;
     } catch(e) {
-      return "Error";
+      return e.response.data.error.message;
     }
   }
 }
