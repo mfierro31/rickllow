@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ListingCard.css';
 import SaveHeart from './SaveHeart';
-import { numberWithCommas } from './helpers';
+import { imageKitUrl, numberWithCommas } from './helpers';
 
 const ListingCard = ({ name, cost, image }) => {
   return (
     <div className="ListingCard card rounded shadow">
       <div className="ListingCard-img-container">
         <Link to={`/listings/${name}`}>
-          <img src={`/images/${image}`} className="card-img-top img-fluid" alt={name} />
+          <img src={`${imageKitUrl}${image}`} className="card-img-top img-fluid" alt={name} />
         </Link>
         <SaveHeart color="white" />
       </div>

@@ -7,6 +7,7 @@ import { numberWithCommas } from './helpers';
 import ReviewForm from './ReviewForm';
 import RickllowApi from './api';
 import FourOFourPage from './404Page';
+import { imageKitUrl } from './helpers';
 
 const Listing = () => {
   const { name } = useParams();
@@ -56,7 +57,7 @@ const Listing = () => {
       <div className="row justify-content-center">
         {listing.images.map((img, i) => (
           <div key={i} className={imgClassName + " mb-4 Listing-img-col"}>
-            <img src={`/images/${img}`} className="img-fluid Listing-image rounded shadow" alt={img} />
+            <img src={`${imageKitUrl}${img}`} className="img-fluid Listing-image rounded shadow" alt={img} />
           </div>
         ))}
       </div>
@@ -86,7 +87,7 @@ const Listing = () => {
         <h3 className="mb-3">Agent:</h3>
         <div className="col-12 col-md-6 mb-4">
           <h5>{listing.agent.name}</h5>
-          <img src={`/images/${listing.agent.image}`} className="img-fluid rounded shadow" alt={listing.agent.name} />
+          <img src={`${imageKitUrl}${listing.agent.image}`} className="img-fluid rounded shadow" alt={listing.agent.name} />
         </div>
         <div className="col-12 col-md-6 mb-5">
           <h5 className="mb-3">View this location with {listing.agent.name}!</h5>

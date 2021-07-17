@@ -15,4 +15,6 @@ function isoToLocale(date, locale, options) {
   return adjustedDate.toLocaleDateString(locale, options);
 }
 
-export { numberWithCommas, isoToLocale };
+const imageKitUrl = "https://ik.imagekit.io/mfierro31/";
+
+export { numberWithCommas, isoToLocale, imageKitUrl };

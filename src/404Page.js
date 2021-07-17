@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './404Page.css';
+import { imageKitUrl } from './helpers';
 
 const FourOFourPage = ({ message }) => {
   const history = useHistory();
@@ -10,7 +11,7 @@ const FourOFourPage = ({ message }) => {
   }
 
   useEffect(() => {
-    document.body.style.backgroundImage = `url("/images/schrodingers_cats.jpeg")`;
+    document.body.style.backgroundImage = `url("${imageKitUrl}schrodingers_cats.jpeg")`;
     document.body.style.backgroundPosition = 'center center';
     document.body.style.backgroundRepeat = 'no-repeat';
     document.body.style.backgroundAttachment = 'fixed';
